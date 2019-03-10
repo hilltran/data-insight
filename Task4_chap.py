@@ -121,3 +121,66 @@ prompt = "Please enter score between 0.0 and 1.0\n"
 enter_score = (input(prompt))
 print(computegrade(enter_score))
 ## End Code______
+
+# ##Code Start______Version 2 on 10-3-19
+# score = None
+# prompt = "Please enter score between 0.0 and 1.0\n"
+# score = (input(prompt))
+# while score != None:
+#   try:
+#     if score > 0 and score < 1:
+#       score = float(score)
+#   except:
+#     print("Please enter score between 0.0 and 1.0")
+#     break
+# score = (input("Enter only score between 0.0 and 1.0 \n"))
+# # try:
+# # score > 0 and score < 1:
+# score = float(score)
+# # except:
+# #   print("Please enter score between 0.0 and 1.0 next time. Goodbye")
+# #   quit()
+# if score >= 0.9 and score <=1.0:
+#   print("A")
+# elif score >= 0.8:
+#   print("B")
+# elif score >= 0.7:
+#   print("C")
+# elif score >= 0.6:
+#   print("D")
+# elif score < 0.5:
+#   print("F")
+# else:
+#   print("Bad Score")
+# ## End Code______
+
+# ##Code Start______Version 3 on 10-3-19
+score = None
+prompt = "Please enter score between 0.0 and 1.0\n"
+score = (input(prompt))
+while score != None:
+  try:
+    if score > 0 and score < 1:
+      score = float(score)
+  except:
+    break
+score = (input("Enter only score between 0.0 and 1.0 \n"))
+try:
+  score = float(score)
+except:
+  print("Please enter score between 0.0 and 1.0 next time. Goodbye")
+  quit()
+if score >= 0.9 and score <=1.0:
+  print("A")
+elif score >= 0.8 and score <0.9:
+  print("B")
+elif score >= 0.7 and score <0.8:
+  print("C")
+elif score >= 0.6 and score <0.7:
+  print("D")
+elif score < 0.5 and score >=0: # the reason for not using 'elif score >= 0.8' instead of 'elif score >= 0.8 and score <0.9:' because if it a number larger or = to 1 or 0 or -minus number it would get a grade.
+  print("F")
+else:
+  print("Bad Score")
+
+# ## End Code______
