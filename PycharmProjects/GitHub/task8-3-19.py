@@ -121,3 +121,88 @@ prompt = "Please enter score between 0.0 and 1.0\n"
 enter_score = (input(prompt))
 print(computegrade(enter_score))
 ## End Code______
+from flask import Flask, jsonify, request, url_for, redirect, session, render_template, g
+from flaskext.mysql import MySQL
+
+app = Flask(__name__)
+
+app.config['DEBUG'] = True
+app.config['SECRET_KEY'] = 'Thisisasecret!'
+
+# MySQL configurations
+app.config['MYSQL_DATABASE_USER'] = 'root'
+app.config['MYSQL_DATABASE_PASSWORD'] = ''
+app.config['MYSQL_DATABASE_DB'] = 'strata'
+app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+
+flaskmysql = MySQL()
+flaskmysql.init_app(app)
+
+def connect_db(flaskmysql):
+    con = flaskmysql.connect()
+    return con
+
+def get_db(flaskmysql):
+    if not hasattr(g, 'mysql_db'):
+        g.mysql_db = connect_db(flaskmysql)
+    return g.mysql_db
+
+@app.teardown_appcontext
+def close_db(error):
+    if hasattr(g, 'mysql_db'):
+        g.mysql_db.close()
+
+@app.route('/')
+def index():
+
+    return "<h1>Strata Issues</h1><button onclick=""window.location.href='create'"">Raise Issue</button>"
+
+
+@app.route('/create', methods=['GET', 'POST'])
+def create():
+    if request.method == 'GET':
+        return render_template('create.html')
+    else:
+        issue_description = request.form['issue_description']
+        con = get_db(flaskmysql)
+        cur = con.cursor()
+        cur.execute('insert into issues (issue_description) values (%s)', (issue_description))
+        con.commit()
+        return redirect(url_for('read'))
+
+@app.route('/read', methods=['POST', 'GET'])
+def read():
+    con = get_db(flaskmysql)
+    cur = con.cursor()
+    cur.execute('select * from issues')
+    results = cur.fetchall()
+    #Start - Conversion from Tuples to Dictionary (Copied from Stack Overflow =))
+    def Convert(tup, di):
+        di = dict(tup)
+        return di
+    dictionary = {}
+    results_dict = Convert(results, dictionary)
+    print('results_dict : ', results_dict)
+    return render_template('read.html', results_dict=results_dict)
+
+@app.route('/update', methods=['GET', 'POST'])
+def update():
+    con = get_db(flaskmysql)
+    cur = con.cursor()
+    cur.execute('update issues \
+                    set issue_description = %s \
+                  where issue_number = %s', ('dummyname',1))
+    con.commit()
+    return redirect(url_for('read'))
+
+@app.route('/delete', methods=['GET', 'POST'])
+def delete():
+    con = get_db(flaskmysql)
+    cur = con.cursor()
+    cur.execute('delete from issues \
+                  where issue_number = %s', (2))#need delete to become like update and have delete by itself it from line 2.
+    con.commit()
+    return redirect(url_for('read'))
+
+if __name__ == '__main__':
+    app.run()
