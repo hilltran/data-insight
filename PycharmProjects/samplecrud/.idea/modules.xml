@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../strataissue/.idea/strataissue.iml" filepath="$PROJECT_DIR$/../strataissue/.idea/strataissue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../strataissue/.idea/samplecrud.iml" filepath="$PROJECT_DIR$/../strataissue/.idea/samplecrud.iml" />
     </modules>
   </component>
 </project>
