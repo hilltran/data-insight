@@ -82,32 +82,99 @@
 #     print(key, val)
 ## End Code______
 import string
-d={}
-fhand = open('//Users//nightowl//Desktop//5WeeksPythonDevCourse//mbox-short.txt')
-day = []
-count = 0
-l = list()
-time = []
-for line in fhand:
-    words = line.split()
-    if not words:
-        continue
-    else:
-        if words[0]=='From':
-            # print(words[5])
-            split = words[5].rsplit(':', 2)
-            # print(split[0])
-            time.append(split[0])
-            count = time.count(split[0])
-            d[split[0]] = count
-        else:
-            continue
+
+
+#####Code Start______
+# ## End Code______
+# d={}
+# fhand = open('//Users//nightowl//Desktop//5WeeksPythonDevCourse//mbox-short.txt')
+# day = []
+# count = 0
+# l = list()
+# time = []
+# for line in fhand:
+#     words = line.split()
+#     if not words:
+#         continue
+#     else:
+#         if words[0]=='From':
+#             # print(words[5])
+#             split = words[5].rsplit(':', 2)
+#             # print(split[0])
+#             time.append(split[0])
+#             count = time.count(split[0])
+#             d[split[0]] = count
+#         else:
+#             continue
+#
+# # # Sort the dictionary by key
+# dl = list()
+# for key, val in list(d.items()):
+#     dl.append((key, val))
+#
+# dl.sort()
+# for p in dl:
+#     print(p)
+# ## End Code______
+#
+#
+# Exercise 3: Write a program that reads a file and prints the letters in decreasing order of frequency. Your program should convert all the input to lower case and only count the letters a-z. Your program should not count spaces, digits, punctuation, or anything other than the letters a-z. Find text samples from several different languages and see how letter frequency varies between languages. Compare your results with the tables at https://wikipedia.org/wiki/Letter_frequencies.
+
+# ##Code Start______
+# d = {}
+# count = 0
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# fhand = open('//Users//nightowl//Desktop//5WeeksPythonDevCourse//mbox.txt')
+# # l = list()
+# time = []
+# for line in fhand:
+#     words = line.split()
+#     for letters in words:
+#         letter = list(letters)
+#         for i in letter:
+#             if i in alphabet:
+#                 if i not in d:
+#                     d[i] = 1
+#                 else:
+#                     d[i] += 1
+#
+# from operator import itemgetter
+# for key, value in sorted(d.items(), key = itemgetter(1)):
+#     print(key, value) #lowest to highest.
+# ## End Code______
+# ____________________
+
+ # for key, value in sorted(d.items(), key = itemgetter(1), reverse = True):
+ #    print(key, value)  for reverse order of highest to lowest
+
+# t.sort() did not work with the below even with code only the above
+# {k: t[k] for k in sorted(t, key=t.get, reverse=True)}
+
 
 # # Sort the dictionary by key
-dl = list()
-for key, val in list(d.items()):
-    dl.append((key, val))
+# dl = list()
+# for key, val in list(d.items()):
+#     dl.append((key, val))
+#
+# dl.sort()
+# for p in dl:
+#     print(p)
+## End Code______
 
-dl.sort()
-for p in dl:
-    print(p)
+    # print(letters)
+    # print(words)
+
+    # for letters in words:
+    #     letter = list(s)
+    #     print(letter)
+    #     if not alphabet:
+    #         continue
+    #     elif letters in d:
+    #         d[letters] = 1
+    #     else:
+    #         d[letters] = count + 1
+
+# print(d)
+
+# if in list(string.ascii_lowercase):
+
