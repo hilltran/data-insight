@@ -1,0 +1,34 @@
+Data scientists utilize their analytical, 
+statistical, and programming skills to collect, analyze, and interpret large data sets. They then use this information to develop data-driven solutions to difficult business challenges. Data scientists commonly have a bachelor's degree in statistics, math, computer science, or economics. Data scientists have a wide range of technical competencies including: statistics and machine learning, coding languages, databases, machine learning, and reporting technologies.
+
+Analysing data and checking data sets.
+
+
+Used (MS SQL Server, MySQL, PostgreSQL)
+
+Experience working in Agile using Jira
+
+
+Quick learner, welcomes new challenges and is not afraid to push the boundaries. 
+
+Self-starters with the ability to work autonomously at times and as part of a team 
+
+data visualisation and data wrangling tools (Power BI,
+
+As a data engineer, you may have experience spanning traditional DW and ETL architectures. But for this role it is important to have industry experience working with big data ecosystems like Spark/Hadoop and Redshift. You've probably been in the industry as an engineer for 2+ years and have developed a passion for the data that drives businesses. 
+
+
+Strong analytical skills with the ability to collect, organise, analyse, and disseminate information with attention to detail and accuracy.
+Experience with use of relational databases, SQL (or similar language) and data mining
+Knowledge of advanced statistical software packages, such as, Python, R, SPSS
+Understanding of predictive/analytical modelling techniques, theories, principle and practices
+Experience with BI tools such as Tableau, Power BI or other data visualisation tools
+Solid written and verbal communication skills
+Tertiary qualification in statistics, mathematics, economics, physics, engineering, computer science or a related discipline
+
+
+It has been a pleasure working with Hieu, he takes initial and has can do attitude. 
+A quick learner and dedicated, hard working. has strong analytical skills especially analyse data for migration. 
+
+A quick learner, learning and able to pick up SQL and PowerBI while on the job. 
+I highly recommend Hieu as analysing data and interpreting data.  

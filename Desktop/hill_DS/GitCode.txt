@@ -1,0 +1,53 @@
+Git Bash, 
+Version control, share code with others. 
+
+Clone, 
+commit  on local
+
+Push in to server.
+
+Git pull update clone to the latest. 
+
+SVN, GIT 
+Bitbuckhit 
+
+Jupyter notebook:
+
+H in Command mode for a list of all available keyboard shortcuts.
+
+Shift + Enter run the current cell, select below
+Ctrl + Enter run selected cells
+Alt + Enter run the current cell,
+
+dd  delete
+
+A insert cell above
+B insert cell below
+
+   26  git pull
+   27  rm -f .DS_Store # delete this file and folder..
+   28  cd ..
+   29  ls
+   30  cd DSIA-SYD-FT-Projects-201907
+   31  ls
+   32  cd hies
+   33  ls
+   34  rm -f .DS_Store # delete again.
+
+Nights-MacBook-Pro% git pull     
+error: The following untracked working tree files would be overwritten by merge:
+	.DS_Store
+	hieu/.DS_Store
+Please move or remove them before you merge.
+Aborting
+***********
+to open a file to look at the content:
+
+Nights-MacBook-Pro% git pull
+error: The following untracked working tree files would be overwritten by merge:
+	.DS_Store
+	hieu/.DS_Store
+Please move or remove them before you merge.
+Aborting
+Nights-MacBook-Pro% cat .DS_Store #to open a file to look at the content.
+
